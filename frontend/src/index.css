@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  /* Base font size - responsive across devices */
+  html {
+    font-size: 14px;
+    /* Mobile base */
+  }
+
+  @media (min-width: 640px) {
+    html {
+      font-size: 15px;
+      /* Tablet base */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 16px;
+      /* Desktop base */
+    }
+  }
+
+  body {
+    @apply bg-gym-black text-white font-sans overflow-x-hidden;
+    /* Body text */
+    font-size: 0.875rem;
+    /* 14px mobile, 15px tablet, 16px desktop */
+    line-height: 1.6;
+  }
+
+  /* Responsive heading sizes */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    /* 24.5px mobile, 26.25px tablet, 28px desktop */
+  }
+
+  @media (min-width: 640px) {
+    h1 {
+      font-size: 2rem;
+      /* 30px tablet, 32px desktop */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 2.5rem;
+      /* 40px desktop */
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    /* 21px mobile, 22.5px tablet, 24px desktop */
+  }
+
+  @media (min-width: 640px) {
+    h2 {
+      font-size: 1.75rem;
+      /* 26.25px tablet, 28px desktop */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 2rem;
+      /* 32px desktop */
+    }
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    /* 17.5px mobile, 18.75px tablet, 20px desktop */
+  }
+
+  @media (min-width: 640px) {
+    h3 {
+      font-size: 1.5rem;
+      /* 22.5px tablet, 24px desktop */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h3 {
+      font-size: 1.75rem;
+      /* 28px desktop */
+    }
+  }
+
+  h4 {
+    font-size: 1.125rem;
+    /* 15.75px mobile, 16.875px tablet, 18px desktop */
+  }
+
+  @media (min-width: 640px) {
+    h4 {
+      font-size: 1.25rem;
+      /* 18.75px tablet, 20px desktop */
+    }
+  }
+
+  h5 {
+    font-size: 1rem;
+    /* 14px mobile, 15px tablet, 16px desktop */
+  }
+
+  @media (min-width: 640px) {
+    h5 {
+      font-size: 1.125rem;
+      /* 16.875px tablet, 18px desktop */
+    }
+  }
+
+  h6 {
+    font-size: 0.875rem;
+    /* 12.25px mobile, 13.125px tablet, 14px desktop */
+  }
+
+  @media (min-width: 640px) {
+    h6 {
+      font-size: 1rem;
+      /* 15px tablet, 16px desktop */
+    }
+  }
+
+  /* Paragraph and text elements */
+  p {
+    font-size: 0.875rem;
+    /* 12.25px mobile, 13.125px tablet, 14px desktop */
+    line-height: 1.7;
+  }
+
+  @media (min-width: 640px) {
+    p {
+      font-size: 0.9375rem;
+      /* 14.0625px tablet, 15px desktop */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    p {
+      font-size: 1rem;
+      /* 16px desktop */
+    }
+  }
+
+  /* Small text */
+  small,
+  .text-sm {
+    font-size: 0.75rem;
+    /* 10.5px mobile, 11.25px tablet, 12px desktop */
+  }
+
+  @media (min-width: 640px) {
+
+    small,
+    .text-sm {
+      font-size: 0.8125rem;
+      /* 12.1875px tablet, 13px desktop */
+    }
+  }
+
+  @media (min-width: 1024px) {
+
+    small,
+    .text-sm {
+      font-size: 0.875rem;
+      /* 14px desktop */
+    }
+  }
+
+  /* Button text */
+  button {
+    font-size: 0.875rem;
+    /* 12.25px mobile, 13.125px tablet, 14px desktop */
+  }
+
+  @media (min-width: 640px) {
+    button {
+      font-size: 0.9375rem;
+      /* 14.0625px tablet, 15px desktop */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    button {
+      font-size: 1rem;
+      /* 16px desktop */
+    }
+  }
+
+  /* Input text */
+  input,
+  textarea,
+  select {
+    font-size: 0.875rem;
+    /* 12.25px mobile, 13.125px tablet, 14px desktop */
+  }
+
+  @media (min-width: 640px) {
+
+    input,
+    textarea,
+    select {
+      font-size: 1rem;
+      /* 15px tablet, 16px desktop */
+    }
+  }
+}
+
+
+@layer utilities {
+  .glass-card {
+    @apply bg-glass backdrop-blur-md border border-white/10 shadow-lg rounded-xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gym-orange to-red-600;
+  }
+
+  /* Responsive button sizes */
+  .btn-mobile {
+    @apply px-3 py-2 text-sm sm:px-4 sm:py-2.5 sm:text-base;
+  }
+
+  /* Touch-friendly tap targets (minimum 44px) */
+  .tap-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/20;
+  }
+
+  /* Neon shadow effect */
+  .shadow-neon {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
+  }
+
+  /* Mobile-safe spacing */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 640px) {
+
+  /* Reduce motion for better mobile performance */
+  * {
+    animation-duration: 0.3s !important;
+    transition-duration: 0.2s !important;
+  }
+
+  /* Improve touch targets */
+  button,
+  a {
+    min-height: 44px;
+  }
+}
